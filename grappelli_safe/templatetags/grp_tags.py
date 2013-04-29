@@ -97,3 +97,11 @@ def get_messages(session):
 register.inclusion_tag('admin/includes_grappelli/messages.html')(get_messages)
 
 
+# TRANSLATED MODEL NAME
+def verbose_name(model):
+    """
+    Returns model's verbose name. May be used with a model instance or class.
+    """
+    return model._meta.verbose_name
+
+register.filter(verbose_name)
