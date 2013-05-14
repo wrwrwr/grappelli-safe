@@ -127,7 +127,7 @@
                             <h2>{% trans 'Results' %}</h2>
                             <div class="form-row">
                                 <p>{% blocktrans with cl.result_count as counter %}{{ counter }} found{% endblocktrans %}</p>
-                                <a href="?all=1{% if cl.is_popup %}&amp;pop=1{% endif %}">{% blocktrans with cl.full_result_count as full_result_count %}{{ full_result_count }} total{% endblocktrans %}</a>
+                                <a href="?no_filters=1{% if cl.is_popup %}&amp;pop=1{% endif %}">{% blocktrans with cl.full_result_count as full_result_count %}{{ full_result_count }} total{% endblocktrans %}</a>
                             </div>
                         </div>
                         {% endifnotequal %}
